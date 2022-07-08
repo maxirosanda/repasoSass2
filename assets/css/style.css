@@ -1,0 +1,17 @@
+.card {
+  background-color: rgb(15, 122, 129);
+  color: white;
+}
+.card .fa-desktop {
+  font-size: 60px;
+}
+.card button {
+  border: solid 5px white;
+  border-radius: 5px;
+  background-color: rgba(15, 121, 129, 0);
+  padding: 10px 30px;
+  color: white;
+}
+.card button:hover {
+  background-color: rgb(11, 100, 106);
+}/*# sourceMappingURL=style.css.map */

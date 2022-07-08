@@ -1,0 +1,58 @@
+$colorPrimario:rgb(15,122,129);
+$colorSecundario:rgb(11, 100, 106) ;
+$btn:(
+    border:solid 5px white,
+    b-radio:5px,
+    fondo:rgba(15, 121, 129, 0),
+    padding: 10px 30px,
+    color:white,
+    hover:$colorSecundario
+);
+
+$colores:(
+    primario:$colorPrimario,
+    secundario:$colorSecundario,
+    terciario:rgb(240, 4, 4)
+    
+    );
+
+@mixin fondoyColor ($fondo,$color) {
+    background-color: $fondo;
+    color:$color
+}
+.button{
+    @include fondoyColor(map-get($btn , fondo ),map-get($btn , color ) );
+    border:map-get($btn , border );
+    border-radius: map-get($btn , b-radio);
+    padding: map-get($btn , padding);
+    &:hover{
+        background-color:map-get($btn , hover );
+    }
+}
+
+.card{
+   @include fondoyColor($colorPrimario,#fff );
+    .fa-desktop{
+        font-size: 60px;
+    }
+    button{
+        @extend .button;
+    }
+}
+
+.cardCircular{
+    @extend .card;
+    border-radius: 50%
+}
+
+@each $clave ,$var in $colores {
+    .card-#{$clave}{
+        @extend .card;
+        background-color: $var;
+    }
+}
+
+
+footer{
+    @include fondoyColor($colorPrimario,#fff )
+}

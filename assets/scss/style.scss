@@ -1,0 +1,23 @@
+$colorPrimario:rgb(15,122,129);
+$colorSecundario:rgb(11, 100, 106) ;
+
+
+
+
+.card{
+    background-color: $colorPrimario ;
+    color: white;
+    .fa-desktop{
+        font-size: 60px;
+    }
+    button{
+        border:solid 5px white;
+        border-radius: 5px;
+        background-color:rgba(15, 121, 129, 0) ;
+        padding: 10px 30px;
+        color:white;
+        &:hover{
+            background-color: $colorSecundario ;
+        }
+    }
+}
